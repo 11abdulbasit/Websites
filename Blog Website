@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+ <title>Document</title>
+<style>
+ body {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background:lightgray;
+ color: black;
+ margin: 20px;
+ }
+ h1 {
+ text-align: center;
+ color: black;
+ font-size: 2.5em;
+ margin-bottom: 10px;
+ }
+ h2 {
+ color: #1f3c88;
+ border-bottom: 2px solid #1f3c88;
+ padding-bottom: 5px;
+ margin-top: 30px;
+ }
+ h3, h5 {
+ color: #2e5aac;
+ }
+ p, li {
+ line-height: 1.6;
+ font-size: 1em;
+ }
+ table {
+ width: 100%;
+ border-collapse: collapse;
+ margin: 20px 0;
+
+ }
+ th, td {
+ padding: 10px;
+ border: 1px solid #ccc;
+ }
+ th {
+ background-color: #1f3c88;
+ color: white;
+ }
+ a {
+ color: #1f3c88;
+ text-decoration: none;
+ }
+ a:hover {
+ color: #ff6f61;
+ }
+ input[type=text], input[type=submit] {
+ padding: 8px;
+ margin: 5px 0;
+ border-radius: 5px;
+ border: 1px solid #1f3c88;
+ }
+ input[type=submit] {
+ background-color: #1f3c88;
+ color: white;
+ cursor: pointer;
+ }
+ input[type=submit]:hover {
+ background-color: #ff6f61;
+ }
+ input[type=radio], input[type=checkbox] {
+ margin-right: 5px;
+ }
+ img {
+ display: block;
+ margin: 15px 0;
+ max-width: 100%;
+ height: auto;
+ border-radius: 10px;
+ }
+ hr {
+ border: 0;
+ height: 2px;
+ background-color: #1f3c88;
+ margin: 30px 0;
+ }
+ ul li, ol li {
+ margin: 5px 0;
+ }
+</style>
+</head>
+<body>
+ <h1> Java: The Backbone of Modern Technology</h1>
+<p><b>Java</b> is one of the most popular programming languages used
+in the world today.
+It is used to develop web applications, mobile applications and
+enterprise software.
+This webpage explains the basics and importance of <u>Java
+Programming</u>.
+<hr>
+</p>
+<h2>Student Profile</h2>
+<p><b>Name:</b> Abdul Basit Khan</p>
+<p><b>Program:</b> BS Software Engineering </p>
+<p><b>Semester:</b> 1st Semester</p>
+<p><b>University:</b> University of Karachi</p>
+<h2>Introduction To Java</h2>
+<p>Java is a high-level programming language developed by Sun
+Microsystems in 1995.
+It is known for its platform independence, meaning programs written in
+Java can run
+on different operating systems such as Windows, Linux and Mac.
+
+</p>
+<h3>Key Features Of Java</h3>
+<ul>
+ <li>Object-Oreinted Programing</li>
+ <li>Secure and Reliable</li>
+ <li>Simple and Easy to learn</li>
+ <li>Platform Independent</li>
+</ul>
+<h5>Why i select java language?</h5>
+<p>Because it is a powerful and reliable programming language. It helps
+in creating dynamic and interactive web applications. Java is secure
+and widely used, which makes it a good choice for building strong
+backend systems. It also works on different platforms, so the website
+can run easily on various devices. Overall, Java makes the website more
+efficient and easy to manage.
+</p>
+<br>
+<h3>Advantages Of Java</h3>
+<ol>
+<li>Write Once Run Anywhere</li>
+<li>Large developer community</li>
+<li>Used for Android development</li>
+<li>High security features</li>
+</ol>
+<hr>
+<h2>Future Scope Of Java</h2>
+<p>The future scope of Java is very strong and promising. Here are some
+key points:</p>
+<p>
+<br><b>Web and Mobile Development</b> – Java is widely used for
+building websites, web applications, and Android mobile apps.</p>
+<p><br><b>Enterprise Applications</b> – Many big companies use Java
+for large-scale business software because it is reliable and
+secure.</p>
+<p><br><b>Cloud Computing</b> – Java is used in cloud-based
+applications and services due to its platform independence.<p>
+<p><br><b>Big Data and AI</b> – Java works well with big data tools
+(like Hadoop) and is also used in machine learning and AI projects.
+</p>
+<p><br><b>High Demand Jobs </b> – Java developers are always in demand,
+so learning Java gives good career opportunities worldwide</p>
+<br><br><hr>
+<h2>Application Of Java </h2>
+<img
+src="https://t4.ftcdn.net/jpg/02/92/83/57/360_F_292835773_oImixQGFKLpOP
+njfsbesHyqdjOk5hsxL.jpg" alt="Java Image">
+<p>
+Java is widely used in <b>web development</b>, Android apps, banking
+systems, and enterprise
+software applications.
+</p>
+<hr>
+<h2>Java Application Table</h2>
+<table border="1" cellpadding="10" cellspacing="5">
+<tr>
+<th>Field</th>
+<th>Example 1</th>
+<th>Example 2</th>
+</tr>
+<tr>
+<td>Application Development</td>
+<td>Android Apps</td>
+<td>Games</td>
+</tr>
+<tr>
+<td>Mobile Apps Development</td>
+<td>Social Media Apps</td>
+<td>Mobile Banking Apps
+</td>
+</tr>
+<tr>
+<td>Web Development</td>
+<td>Dynamic Websites</td>
+<td>E-commerce Sites</td>
+</tr>
+
+</table>
+<hr>
+<h2>Useful Java Websites</h2>
+<a href="https://www.codecademy.com/" target="_blank">
+ Java Website CodecAcademy
+</a>
+<br>
+ <a href="https://www.w3schools.com" target="_blank">
+ Java Website W3School
+ </a>
+ <hr>
+ <h2>Signup Form</h2>
+ <form>
+ Name:
+ <br>
+ <input type="text">
+ <br><br>
+ Gender:
+ <br>
+ <input type="radio" name="gender"> Male
+ <input type="radio" name="gender"> Female
+<br><br>
+Interest in Programming:
+<br>
+<input type="checkbox"> Java
+<br>
+<input type="checkbox"> Web Development
+<br>
+<input type="checkbox"> Android Development
+<br><br>
+<input type="submit" value="Submit">
+ </form>
+</body>
+</html>
