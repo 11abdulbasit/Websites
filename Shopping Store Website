@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khan Store</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color:rgb(68,68,75);
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:black;
+}
+
+nav h1{
+    color:white;
+    text-shadow:2px 2px gray;
+}
+
+nav input{
+    padding:8px 15px;
+    border:none;
+    border-radius:20px;
+    width:250px;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+nav ul li{
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+
+.display-page{
+    background:url("https://wallpapercave.com/wp/wp16312572.webp");
+    height:450px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background-size:cover;
+    background-position:center;
+}
+
+.box{
+    background:rgba(0,0,0,0.7);
+    padding:30px;
+    border-radius:12px;
+}
+
+.box h1{
+    color:white;
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.box h4{
+    color:white;
+    margin-bottom:20px;
+}
+
+.box button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.box button:hover{
+    background:orange;
+    color:white;
+}
+
+.products{
+    padding:50px;
+}
+
+.products h2{
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+    text-align:center;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:orange;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.card button{
+    padding:10px 20px;
+    border:none;
+    background:#131921;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:orange;
+}
+
+footer{
+    margin-top:40px;
+    background:black;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+@media (max-width: 768px){
+
+    nav{
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        padding: 20px;
+    }
+
+    nav input{
+        width: 100%;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .display-page{
+        height: 350px;
+        padding: 20px;
+    }
+
+    .box{
+        width: 100%;
+    }
+
+    .box h1{
+        font-size: 32px;
+    }
+
+    .box h4{
+        font-size: 16px;
+    }
+
+    .products{
+        padding: 20px;
+    }
+
+    .products h2{
+        font-size: 30px;
+    }
+
+    .card img{
+        height: 180px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h1>Khan Store</h1>
+
+        <input type="text" placeholder="Search products here...">
+
+        <ul>
+            <li>Home</li>
+            <li>Products</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<section class="display-page">
+
+    <div class="box">
+        <h1>Big Sale Today</h1>
+        <h4>Best products with amazing discounts</h4>
+        <button>Shop Now</button>
+    </div>
+
+</section>
+
+
+
+<section class="products">
+
+    <h2>Our Products</h2>
+
+    <div class="product-grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="">
+            <div class="card-content">
+                <h3>Mobile</h3>
+                <p class="price">33,000 RS</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="">
+            <div class="card-content">
+                <h3>Headphone</h3>
+                <p class="price">3,000 RS</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab" alt="">
+            <div class="card-content">
+                <h3>iPhone</h3>
+                <p class="price">130,000 RS</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505" alt="">
+            <div class="card-content">
+                <h3>Samsung</h3>
+                <p class="price">90,000 RS</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d" alt="">
+            <div class="card-content">
+                <h3>Speaker</h3>
+                <p class="price">10,000 RS</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>Thanks for Shopping ❤️</p>
+</footer>
+
+</body>
+</html>
