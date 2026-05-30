@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Clone</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f1f1f1;
+    }
+
+    .navbar{
+      width:100%;
+      height:60px;
+      background:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 20px;
+      position:fixed;
+      top:0;
+      left:0;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:30px;
+      color:red;
+      font-weight:bold;
+    }
+
+    .search{
+      width:40%;
+      display:flex;
+    }
+
+    .search input{
+      width:100%;
+      padding:10px;
+      border:1px solid #ccc;
+      border-radius:20px 0 0 20px;
+      outline:none;
+    }
+
+    .search button{
+      padding:10px 20px;
+      border:none;
+      background:red;
+      color:white;
+      border-radius:0 20px 20px 0;
+      cursor:pointer;
+    }
+
+    .profile{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:#ccc;
+    }
+
+    .sidebar{
+      width:200px;
+      height:100vh;
+      background:white;
+      position:fixed;
+      top:60px;
+      left:0;
+      padding:20px;
+    }
+
+    .sidebar ul{
+      list-style:none;
+    }
+
+    .sidebar ul li{
+      padding:15px;
+      border-radius:10px;
+      cursor:pointer;
+    }
+
+    .sidebar ul li:hover{
+      background:#eee;
+    }
+
+
+    .main{
+      margin-left:220px;
+      margin-top:80px;
+      padding:20px;
+    }
+
+    .video-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .video-card{
+      background:white;
+      border-radius:10px;
+      overflow:hidden;
+      text-decoration:none;
+      color:black;
+      transition:0.3s;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .video-card:hover{
+      transform:scale(1.03);
+    }
+
+    .video-card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+
+    .video-info{
+      padding:15px;
+    }
+
+    .video-title{
+      font-size:18px;
+      font-weight:bold;
+      margin-bottom:8px;
+    }
+
+    .channel{
+      color:gray;
+      font-size:14px;
+    }
+
+@media (max-width: 768px){
+
+  .sidebar{
+    width:70px;
+    padding:10px;
+  }
+
+  .sidebar ul li{
+    font-size:12px;
+    text-align:center;
+    padding:10px 5px;
+  }
+
+  .main{
+    margin-left:80px;
+    padding:10px;
+  }
+
+  .search{
+    width:55%;
+  }
+
+  .video-container{
+    grid-template-columns:1fr;
+  }
+
+  .video-card img{
+    height:200px;
+  }
+
+}
+
+
+@media (max-width: 500px){
+
+  .navbar{
+    flex-direction:column;
+    height:auto;
+    padding:10px;
+    gap:10px;
+  }
+
+  .search{
+    width:100%;
+  }
+
+  .sidebar{
+    display:none;
+  }
+
+  .main{
+    margin-left:0;
+    margin-top:140px;
+  }
+
+  .video-card img{
+    height:180px;
+  }
+
+}
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+
+    <div class="logo">YouTube</div>
+
+    <div class="search">
+      <input type="text" placeholder="Search here...">
+      <button>Search</button>
+    </div>
+
+    <div class="profile"></div>
+
+  </div>
+
+  <div class="sidebar">
+    <ul>
+      <li>🏠 Home</li>
+      <li>🔥 Trending</li>
+      <li>🎵 Music</li>
+      <li>🎮 Gaming</li>
+      <li>📺 Subscriptions</li>
+      <li>⚙ Settings</li>
+    </ul>
+  </div>
+
+  <div class="main">
+
+    <div class="video-container">
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=_gqcRqZJx_Y" target="_blank">
+        <img src="https://i.ytimg.com/vi/_gqcRqZJx_Y/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCh0nhjlYBSK8osbvX1NQ2z_C35og">
+        <div class="video-info">
+          <div class="video-title">Bulbulay : Eid Speacial</div>
+          <div class="channel">Bulbulay</div>
+        </div>
+      </a>  
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=t-0WuoQto9g" target="_blank">
+        <img src="https://i.ytimg.com/vi/t-0WuoQto9g/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCC-ENK01TsW3zdilf6UqLnY1um4Q">
+        <div class="video-info">
+          <div class="video-title">100% Scholarship To China?</div>
+          <div class="channel">Junaid Akram • 5M views</div>
+        </div>
+      </a>   
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=Tgm5AW7Qt5w&pp=0gcJCQ0LAYcqIYzv" target="_blank">
+        <img src="https://i.ytimg.com/vi/Tgm5AW7Qt5w/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDGp_u9M1gtwDqbUsJrzF2xjgqCaQ">
+        <div class="video-info">
+          <div class="video-title">Ghareeb for Sale</div>
+          <div class="channel">Raftar • 3M views</div>
+        </div>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=tVzUXW6siu0&list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w" target="_blank">
+        <img src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBenW1M30gqWfrb8bLNydwUJiebEA">
+        <div class="video-info">
+          <div class="video-title">Web Development Full Course</div>
+          <div class="channel">CodeWithHarry • 15M views</div>
+        </div>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=IWGAQZIHGZs" target="_blank">
+        <img src="https://i.ytimg.com/vi/IWGAQZIHGZs/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBUkCxoTHIuwYCwN3Upwi2MrFpK0w">
+        <div class="video-info">
+          <div class="video-title">Eid Day 3</div>
+          <div class="channel">Sharum Ki Sketchbook • 8M views</div>
+        </div>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=dgW5zmC5gZw&pp=0gcJCQ0LAYcqIYzv" target="_blank">
+        <img src="https://i.ytimg.com/vi/dgW5zmC5gZw/hq720_custom_1.jpg?sqp=CJz569AG-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAbZ38ctbBFEHv69H4H9SRnIMtQhw">
+        <div class="video-info">
+          <div class="video-title">Fake Qasai Siyapa : Hashmat & Sons</div>
+          <div class="channel">B Prime Official • 6M views</div>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+</body>
+</html> 
