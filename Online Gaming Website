@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khan Arena</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#111;
+    color:#fff;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 10px;
+    background:#1a1a1a;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    
+    text-shadow:2px 5px  black;
+    font-size:30px;
+    font-weight:bold;
+    color:#88778a;
+}
+
+.search-box input{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    width:250px;
+}
+
+.hero{
+    background-image: url("https://wallpapercave.com/wp/wp9223696.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+    height:500px;
+    /* background:linear-gradient(135deg,#000000,#7b2ff7); */
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    text-shadow: 2px 4px black;
+    font-size:60px;
+}
+
+.hero p{
+    text-shadow: 2px 2px rgb(11, 11, 12);
+    font-weight:bold;
+    margin-top:10px;
+    font-size:20px;
+}
+
+.categories{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:20px;
+}
+
+.categories button{
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    background:#222;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.categories button:hover{
+    background:#00d4ff;
+    color:black;
+}
+
+.games{
+    padding:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.game-card{
+    background:#1e1e1e;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.game-card:hover{
+    transform:translateY(-8px);
+}
+
+.game-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.game-card h3{
+    padding:15px;
+}
+
+.game-card p{
+    padding:0 15px 15px;
+    color:#ccc;
+}
+
+.play-btn{
+    width:100%;
+    border:none;
+    padding:12px;
+    background:#00d4ff;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+footer{
+    background:#1a1a1a;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+
+@media(max-width:700px){
+
+header{
+    flex-direction:column;
+    gap:10px;
+}
+
+.search-box input{
+    width:100%;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">🎮 Khan Arena</div>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search Games here...">
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Play Free Online Games</h1>
+    <p>Action • Racing • Puzzle • Arcade • Sports</p>
+</section>
+
+<div class="categories">
+    <button>Action</button>
+    <button>Racing</button>
+    <button>Puzzle</button>
+    <button>Arcade</button>
+    <button>Sports</button>
+</div>
+
+<section class="games" id="games">
+
+<div class="game-card">
+<img src="https://wallpapercave.com/wp/wp14652606.jpg">
+<h3>Car Racing</h3>
+<p>Fast racing challenge.</p>
+<button class="play-btn">Play Now</button>
+</div>
+
+<div class="game-card">
+<img src="https://wallpapercave.com/wp/wp13926269.jpg">
+<h3>Space Shooter</h3>
+<p>Destroy enemy ships.</p>
+<button class="play-btn">Play Now</button>
+</div>
+
+<div class="game-card">
+<img src="https://wallpapercave.com/uwp/uwp4973191.png">
+<h3>Ninja Run</h3>
+<p>Run and avoid obstacles.</p>
+<button class="play-btn">Play Now</button>
+</div>
+
+<div class="game-card">
+<img src="https://wallpapercave.com/fuwp-255/uwp4936878.png">
+<h3>Puzzle Master</h3>
+<p>Solve exciting puzzles.</p>
+<button class="play-btn">Play Now</button>
+</div>
+
+<div class="game-card">
+<img src="https://wallpapercave.com/uwp/uwp4957861.jpeg">
+<h3>Football Pro</h3>
+<p>Score amazing goals.</p>
+<button class="play-btn">Play Now</button>
+</div>
+<div class="game-card">
+<img src="https://wallpapercave.com/uwp/uwp4744805.png">
+<h3>GTA V</h3>
+<p>Street-level hustler.</p>
+<button class="play-btn">Play Now</button>
+</div><div class="game-card">
+<img src="https://wallpapercave.com/uwp/uwp4195867.jpeg">
+<h3>PUBG</h3>
+<p>Enemies ahead.</p>
+<button class="play-btn">Play Now</button>
+</div>
+<div class="game-card">
+<img src="https://wallpapercave.com/wp/wp15222751.webp">
+<h3>Zombie Attack</h3>
+<p>Survive the zombie wave.</p>
+<button class="play-btn">Play Now</button>
+</div>
+
+</section>
+
+<footer>
+    © 2026 Khan Arena | All Rights Reserved
+</footer>
+
+<script>
+const search = document.getElementById("search");
+
+search.addEventListener("keyup", function(){
+
+let value = this.value.toLowerCase();
+
+document.querySelectorAll(".game-card").forEach(card => {
+
+let title = card.querySelector("h3").textContent.toLowerCase();
+
+if(title.includes(value)){
+    card.style.display = "block";
+}
+else{
+    card.style.display = "none";
+}
+
+});
+
+});
+</script>
+
+</body>
+</html>
