@@ -10,7 +10,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 body{
@@ -18,70 +18,79 @@ body{
     color:#fff;
 }
 
+
 header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:10px 10px;
+    padding:12px 15px;
     background:#1a1a1a;
     position:sticky;
     top:0;
     z-index:1000;
+    flex-wrap:wrap;
 }
 
 .logo{
-    
-    text-shadow:2px 5px  black;
-    font-size:30px;
+    font-size:28px;
     font-weight:bold;
-    color:#88778a;
+    color:#9a8fa0;
+    text-shadow:2px 3px black;
+}
+
+
+.search-box{
+    flex:1;
+    display:flex;
+    justify-content:flex-end;
 }
 
 .search-box input{
     padding:10px;
     border:none;
-    border-radius:5px;
+    border-radius:6px;
     width:250px;
+    max-width:100%;
+    outline:none;
 }
 
-.hero{
-    background-image: url("https://wallpapercave.com/wp/wp9223696.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
 
-    height:500px;
-    /* background:linear-gradient(135deg,#000000,#7b2ff7); */
+.hero{
+    background-image:url("https://wallpapercave.com/wp/wp9223696.jpg");
+    background-size:cover;
+    background-position:center;
+    height:450px;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
+    padding:20px;
 }
 
 .hero h1{
-    text-shadow: 2px 4px black;
-    font-size:60px;
+    font-size:clamp(28px, 6vw, 60px);
+    text-shadow:2px 4px black;
 }
 
 .hero p{
-    text-shadow: 2px 2px rgb(11, 11, 12);
-    font-weight:bold;
+    font-size:clamp(14px, 3.5vw, 20px);
     margin-top:10px;
-    font-size:20px;
+    font-weight:bold;
+    text-shadow:2px 2px black;
 }
+
 
 .categories{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:10px;
-    padding:20px;
+    padding:15px;
 }
 
 .categories button{
-    padding:10px 20px;
+    padding:10px 18px;
     border:none;
     border-radius:25px;
     background:#222;
@@ -95,12 +104,14 @@ header{
     color:black;
 }
 
+
 .games{
-    padding:30px;
+    padding:20px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+    gap:15px;
 }
+
 
 .game-card{
     background:#1e1e1e;
@@ -110,28 +121,28 @@ header{
 }
 
 .game-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 }
 
 .game-card img{
     width:100%;
-    height:180px;
+    height:150px;
     object-fit:cover;
 }
 
 .game-card h3{
-    padding:15px;
+    padding:10px;
 }
 
 .game-card p{
-    padding:0 15px 15px;
+    padding:0 10px 10px;
     color:#ccc;
 }
 
 .play-btn{
     width:100%;
+    padding:10px;
     border:none;
-    padding:12px;
     background:#00d4ff;
     font-weight:bold;
     cursor:pointer;
@@ -140,9 +151,10 @@ header{
 footer{
     background:#1a1a1a;
     text-align:center;
-    padding:20px;
+    padding:15px;
     margin-top:20px;
 }
+
 
 @media(max-width:700px){
 
@@ -151,19 +163,30 @@ header{
     gap:10px;
 }
 
-.search-box input{
+.search-box{
     width:100%;
+    justify-content:center;
 }
+
+.search-box input{
+    width:90%;
+}
+
+.hero{
+    height:300px;
+}
+
 }
 </style>
 </head>
+
 <body>
 
 <header>
     <div class="logo">🎮 Khan Arena</div>
 
     <div class="search-box">
-        <input type="text" id="search" placeholder="Search Games here...">
+        <input type="text" id="search" placeholder="Search Games...">
     </div>
 </header>
 
@@ -216,17 +239,21 @@ header{
 <p>Score amazing goals.</p>
 <button class="play-btn">Play Now</button>
 </div>
+
 <div class="game-card">
 <img src="https://wallpapercave.com/uwp/uwp4744805.png">
 <h3>GTA V</h3>
 <p>Street-level hustler.</p>
 <button class="play-btn">Play Now</button>
-</div><div class="game-card">
+</div>
+
+<div class="game-card">
 <img src="https://wallpapercave.com/uwp/uwp4195867.jpeg">
 <h3>PUBG</h3>
 <p>Enemies ahead.</p>
 <button class="play-btn">Play Now</button>
 </div>
+
 <div class="game-card">
 <img src="https://wallpapercave.com/wp/wp15222751.webp">
 <h3>Zombie Attack</h3>
@@ -244,22 +271,13 @@ header{
 const search = document.getElementById("search");
 
 search.addEventListener("keyup", function(){
+    let value = this.value.toLowerCase();
 
-let value = this.value.toLowerCase();
+    document.querySelectorAll(".game-card").forEach(card => {
+        let title = card.querySelector("h3").textContent.toLowerCase();
 
-document.querySelectorAll(".game-card").forEach(card => {
-
-let title = card.querySelector("h3").textContent.toLowerCase();
-
-if(title.includes(value)){
-    card.style.display = "block";
-}
-else{
-    card.style.display = "none";
-}
-
-});
-
+        card.style.display = title.includes(value) ? "block" : "none";
+    });
 });
 </script>
 
