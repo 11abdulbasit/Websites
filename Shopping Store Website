@@ -18,6 +18,7 @@ body{
     background-color:rgb(68,68,75);
 }
 
+
 nav{
     position:sticky;
     top:0;
@@ -35,10 +36,11 @@ nav h1{
 }
 
 nav input{
-    padding:8px 15px;
+    padding:10px 15px;
     border:none;
     border-radius:20px;
     width:250px;
+    outline:none;
 }
 
 nav ul{
@@ -51,12 +53,18 @@ nav ul li{
     color:white;
     cursor:pointer;
     font-weight:bold;
+    transition:0.3s;
 }
+
+nav ul li:hover{
+    color:orange;
+}
+
 
 
 .display-page{
     background:url("https://wallpapercave.com/wp/wp16312572.webp");
-    height:450px;
+    height:500px;
 
     display:flex;
     justify-content:center;
@@ -71,6 +79,8 @@ nav ul li{
     background:rgba(0,0,0,0.7);
     padding:30px;
     border-radius:12px;
+    max-width:600px;
+    width:90%;
 }
 
 .box h1{
@@ -97,6 +107,7 @@ nav ul li{
     background:orange;
     color:white;
 }
+
 
 .products{
     padding:50px;
@@ -155,11 +166,14 @@ nav ul li{
     color:white;
     border-radius:5px;
     cursor:pointer;
+    transition:0.3s;
 }
 
 .card button:hover{
     background:orange;
 }
+
+
 
 footer{
     margin-top:40px;
@@ -168,51 +182,114 @@ footer{
     text-align:center;
     padding:15px;
 }
-@media (max-width: 768px){
+
+
+
+@media (max-width:768px){
 
     nav{
-        flex-direction: column;
-        gap: 15px;
-        height: auto;
-        padding: 20px;
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
     }
 
     nav input{
-        width: 100%;
+        width:100%;
     }
 
     nav ul{
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap:wrap;
+        justify-content:center;
     }
 
     .display-page{
-        height: 350px;
-        padding: 20px;
-    }
-
-    .box{
-        width: 100%;
+        height:400px;
+        padding:20px;
     }
 
     .box h1{
-        font-size: 32px;
+        font-size:35px;
     }
 
     .box h4{
-        font-size: 16px;
+        font-size:16px;
     }
 
     .products{
-        padding: 20px;
+        padding:25px;
     }
 
     .products h2{
-        font-size: 30px;
+        font-size:30px;
     }
 
     .card img{
-        height: 180px;
+        height:200px;
+    }
+}
+
+
+
+@media (max-width:480px){
+
+    nav{
+        padding:15px;
+    }
+
+    nav h1{
+        font-size:24px;
+    }
+
+    nav ul{
+        gap:10px;
+    }
+
+    nav ul li{
+        font-size:14px;
+    }
+
+    .display-page{
+        height:320px;
+    }
+
+    .box{
+        padding:20px;
+    }
+
+    .box h1{
+        font-size:26px;
+    }
+
+    .box h4{
+        font-size:14px;
+    }
+
+    .box button{
+        padding:10px 18px;
+    }
+
+    .products{
+        padding:15px;
+    }
+
+    .products h2{
+        font-size:24px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card img{
+        height:180px;
+    }
+
+    .price{
+        font-size:18px;
+    }
+
+    footer{
+        font-size:14px;
     }
 }
 
@@ -222,92 +299,138 @@ footer{
 <body>
 
 <header>
-    <nav>
-        <h1>Khan Store</h1>
+<nav>
 
-        <input type="text" placeholder="Search products here...">
+<h1>Khan Store</h1>
 
-        <ul>
-            <li>Home</li>
-            <li>Products</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
-    </nav>
+<input type="text" placeholder="Search products here...">
+
+<ul>
+<li>Home</li>
+<li>Products</li>
+<li>About</li>
+<li>Contact</li>
+</ul>
+
+</nav>
 </header>
-
-
 
 <section class="display-page">
 
-    <div class="box">
-        <h1>Big Sale Today</h1>
-        <h4>Best products with amazing discounts</h4>
-        <button>Shop Now</button>
-    </div>
+<div class="box">
+<h1>Big Sale Today</h1>
+<h4>Best products with amazing discounts</h4>
+<button>Shop Now</button>
+</div>
 
 </section>
 
-
-
 <section class="products">
 
-    <h2>Our Products</h2>
+<h2>Our Products</h2>
 
-    <div class="product-grid">
+<div class="product-grid">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="">
-            <div class="card-content">
-                <h3>Mobile</h3>
-                <p class="price">33,000 RS</p>
-                <button>Buy Now</button>
-            </div>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Mobile">
+<div class="card-content">
+<h3>Mobile</h3>
+<p class="price">33,000 RS</p>
+<button>Buy Now</button>
+</div>
+</div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="">
-            <div class="card-content">
-                <h3>Headphone</h3>
-                <p class="price">3,000 RS</p>
-                <button>Buy Now</button>
-            </div>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Headphone">
+<div class="card-content">
+<h3>Headphone</h3>
+<p class="price">3,000 RS</p>
+<button>Buy Now</button>
+</div>
+</div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab" alt="">
-            <div class="card-content">
-                <h3>iPhone</h3>
-                <p class="price">130,000 RS</p>
-                <button>Buy Now</button>
-            </div>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab" alt="iPhone">
+<div class="card-content">
+<h3>iPhone</h3>
+<p class="price">130,000 RS</p>
+<button>Buy Now</button>
+</div>
+</div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505" alt="">
-            <div class="card-content">
-                <h3>Samsung</h3>
-                <p class="price">90,000 RS</p>
-                <button>Buy Now</button>
-            </div>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505" alt="Samsung">
+<div class="card-content">
+<h3>Samsung</h3>
+<p class="price">90,000 RS</p>
+<button>Buy Now</button>
+</div>
+</div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d" alt="">
-            <div class="card-content">
-                <h3>Speaker</h3>
-                <p class="price">10,000 RS</p>
-                <button>Buy Now</button>
-            </div>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1545454675-3531b543be5d" alt="Speaker">
+<div class="card-content">
+<h3>Speaker</h3>
+<p class="price">10,000 RS</p>
+<button>Buy Now</button>
+</div>
+</div>
 
-    </div>
+<div class="card">
+<img src="https://wallpapercave.com/uwp/uwp4865462.png" alt="Laptop">
+<div class="card-content">
+<h3>Laptop</h3>
+<p class="price">120,000 RS</p>
+<button>Buy Now</button>
+</div>
+</div>
+
+</div>
 
 </section>
 
 <footer>
-    <p>Thanks for Shopping ❤️</p>
+<p>© 2026 Khan Store | Thanks for Shopping ❤️</p>
 </footer>
 
+<script>
+
+const searchInput = document.querySelector("input");
+const cards = document.querySelectorAll(".card");
+
+searchInput.addEventListener("keyup", function() {
+
+    let value = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+
+        let productName = card.querySelector("h3").textContent.toLowerCase();
+
+        if(productName.includes(value)){
+            card.style.display = "block";
+        }
+        else{
+            card.style.display = "none";
+        }
+
+    });
+
+});
+
+const buttons = document.querySelectorAll(".card button");
+
+buttons.forEach(button => {
+
+    button.addEventListener("click", function(){
+
+        let product =
+        this.parentElement.querySelector("h3").textContent;
+
+        alert(product + " added to cart!");
+
+    });
+});
+
+</script>
 </body>
 </html>
