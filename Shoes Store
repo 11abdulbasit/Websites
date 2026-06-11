@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StepX - Move Beyond Limits</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0b0b;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(15px);
+    background:rgba(0,0,0,.4);
+    z-index:1000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:800;
+    color:#ff6b00;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul a:hover{
+    color:#ff6b00;
+}
+
+.btn{
+    padding:12px 25px;
+    background:#ff6b00;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    font-size:80px;
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.hero-text span{
+    color:#ff6b00;
+}
+
+.hero-text p{
+    color:#cfcfcf;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.hero-buttons a{
+    padding:14px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.primary{
+    background:#ff6b00;
+    color:white;
+}
+
+.secondary{
+    border:2px solid #ff6b00;
+    color:#ff6b00;
+}
+
+.hero-image img{
+    width:650px;
+    max-width:100%;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:60px 8%;
+}
+
+.stat-box{
+    background:#151515;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+}
+
+.stat-box:hover{
+    transform:translateY(-10px);
+}
+
+.stat-box h2{
+    color:#ff6b00;
+    font-size:35px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:50px;
+    margin:80px 0 50px;
+}
+
+.section-title span{
+    color:#ff6b00;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:0 8%;
+}
+
+.card{
+    background:#151515;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.price{
+    color:#ff6b00;
+    font-size:25px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.buy-btn{
+    display:inline-block;
+    background:#ff6b00;
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:25px;
+}
+
+footer{
+    margin-top:80px;
+    background:#111;
+    text-align:center;
+    padding:40px;
+    color:#aaa;
+}
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding-top:120px;
+}
+
+.hero-text h1{
+    font-size:50px;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+nav ul{
+    display:none;
+}
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">StepX</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Collection</a></li>
+        <li><a href="#">Reviews</a></li>
+    </ul>
+
+    <a href="#" class="btn">Shop Now</a>
+</nav>
+
+<section class="hero">
+
+<div class="hero-text">
+    <h1>STEP INTO <span>THE FUTURE</span></h1>
+
+    <p>
+        Discover premium sneakers designed for speed,
+        comfort and style. Elevate your game with StepX.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="#" class="primary">Explore</a>
+        <a href="#" class="secondary">Collection</a>
+    </div>
+</div>
+
+<div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200" alt="">
+</div>
+
+</section>
+
+<section class="stats">
+    <div class="stat-box">
+        <h2>25K+</h2>
+        <p>Customers</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>500+</h2>
+        <p>Products</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>50+</h2>
+        <p>Countries</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>4.9★</h2>
+        <p>Rating</p>
+    </div>
+</section>
+
+<h2 class="section-title">Trending <span>Sneakers</span></h2>
+
+<section class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=900">
+<div class="card-content">
+<h3>StepX Phantom</h3>
+<div class="price">$129</div>
+<a href="#" class="buy-btn">Buy Now</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=900">
+<div class="card-content">
+<h3>StepX Nitro</h3>
+<div class="price">$149</div>
+<a href="#" class="buy-btn">Buy Now</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900">
+<div class="card-content">
+<h3>StepX Apex</h3>
+<div class="price">$169</div>
+<a href="#" class="buy-btn">Buy Now</a>
+</div>
+</div>
+
+</section>
+
+<footer>
+    © 2026 StepX | Move Beyond Limits
+</footer>
+
+</body>
+</html>
